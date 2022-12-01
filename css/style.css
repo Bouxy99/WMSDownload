@@ -1,0 +1,25 @@
+#map {
+    height: 500px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.logo {
+    height: 75px;
+    margin: 25px;
+}
+
+.titre {
+    font-size: 75px;
+}
+#img_wms {
+    width: 100%;
+}
+
+.form-inline, #img_wms{
+    margin-bottom: 30px;
+}
+
+label, button{
+    font-weight: bold !important;
+}
