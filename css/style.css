@@ -12,11 +12,11 @@
 .titre {
     font-size: 75px;
 }
-#img_wms {
+.img_wms {
     width: 100%;
 }
 
-.form-inline, #img_wms{
+.form-inline, .img_wms{
     margin-bottom: 30px;
 }
 

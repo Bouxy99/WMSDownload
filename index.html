@@ -29,23 +29,35 @@
 
     <!-- Outils -->
     <div class="form-inline">
-      <label style="margin-left: 25px; pointer-events: none" class="btn btn-warning mx-auto" id="label_resolution"></label>
+      <label style="margin-left: 25px; pointer-events: none" class="btn btn-warning mx-auto"
+        id="label_resolution"></label>
     </div>
     <div style="width: 80%; margin-left: auto;" class="form-inline">
       <label class="mx-1" id="min_resolution"></label>
-      <input style="width: 60%;" type="range" min="0.1" max="5" value="" step="0.1" class="form-range mx-8" id="resolution"
-        oninput="updateJS()">
+      <input style="width: 60%;" type="range" min="0.1" max="5" value="" step="0.1" class="form-range mx-8"
+        id="resolution" oninput="updateJS()">
       <label for="resolution" class="mx-1" id="max_resolution"></label>
     </div>
-    
+
     <div class="form-inline">
-      <button id="apercu" style="width: 150px;" type="button" class="btn btn-secondary mx-auto" onclick="updateWMSImage()">Aperçu</button>
-      <button id="download" style="width: 150px;" type="button" class="btn btn-secondary mx-auto" onclick="downloadWMSImage()"><i class="fa fa-image"></i> Télécharger</button>
+      <button id="apercu" style="width: 150px;" type="button" class="btn btn-secondary mx-auto"
+        onclick="updateWMSImage()">Aperçu</button>
+      <button id="download" style="width: 150px;" type="button" class="btn btn-secondary mx-auto"
+        onclick="downloadWMSImage()"><i class="fa fa-image"></i> Télécharger</button>
     </div>
 
-    <img src="" alt="" id="img_wms">
+    <!-- Liste des dernières emprises -->
+    <div class="row">
+      <div class="col-2">
+        <div class="list-group" id="list-tab" role="tablist"></div>
+      </div>
+      <div class="col-10">
+        <div class="tab-content" id="nav-tabContent"></div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Copyright
+  <!-- Copyright
     <div class="mb-3 bottom_page"> Icônes par <a href="https://www.freepik.com" title="Freepik">Freepik</a> sur <a
         href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
   </div>-->
@@ -71,5 +83,6 @@
 <script src="./js/wms.js"></script>
 <script src="./js/openlayers_base.js"></script>
 <script src="./js/openlayers_draw.js"></script>
+<script src="./js/zone_list.js"></script>
 
 </html>

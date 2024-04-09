@@ -1,10 +1,16 @@
 
 function updateWMSImage() {
     if (zone_select) {
+        // Calcul de la résolution et création du lien
         widht = d_E / resolution;
         height = d_N / resolution;
         link = `https://wms.geo.admin.ch/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=ch.swisstopo.swissimage&FORMAT=image/jpeg&BBOX=${min_E},${min_N},${max_E},${max_N}&CRS=EPSG:2056&WIDTH=${widht}&HEIGHT=${height}`
-        $("#img_wms").attr("src",link);
+       
+        // Ajouter la nouvelle zone dans le dictionnaire temporaire
+        if (new_zone) {
+            updateZoneList();
+        };
+        $(`#img_wms_${active_zone_num}`).attr("src",link);
     };
 };
 
